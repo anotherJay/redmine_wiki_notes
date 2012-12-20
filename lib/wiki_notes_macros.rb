@@ -6,32 +6,32 @@ module WikiNotesMacro
       " @!{{important(text)}}@\n"
       " @!{{warning(text)}}@\n"
 
-    macro :note do |obj, args|
+    macro :note do |obj, args, text|
       o = '<div class="noteclassic">'
-      o << args.join(",")
+      o << (args.empty? && !text.empty? ? textilizable(text) : textilizable(args.join(","))) 
       o << '</div>'
-      o
+      o.html_safe
     end
 
-    macro :tip do |obj, args|
+    macro :tip do |obj, args, text|
       o = '<div class="notetip">'
-      o << args.join(",")
+      o << (args.empty? && !text.empty? ? textilizable(text) : textilizable(args.join(","))) 
       o << '</div>'
-      o
+      o.html_safe
     end
 
-    macro :important do |obj, args|
+    macro :important do |obj, args, text|
       o = '<div class="noteimportant">'
-      o << args.join(",")
+      o << (args.empty? && !text.empty? ? textilizable(text) : textilizable(args.join(","))) 
       o << '</div>'
-      o
+      o.html_safe
     end
 
-    macro :warning do |obj, args|
+    macro :warning do |obj, args, text|
       o = '<div class="notewarning">'
-      o << args.join(",")
+      o << (args.empty? && !text.empty? ? textilizable(text) : textilizable(args.join(","))) 
       o << '</div>'
-      o
+      o.html_safe
     end
   end
 end

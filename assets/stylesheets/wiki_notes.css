@@ -9,11 +9,11 @@
   vertical-align: middle;
   border-collapse: collapse;
   padding: 15px 20px 15px 80px;
-  background-position: 20px 50%;
+  background-position: 20px 15px;
   background-repeat: no-repeat;
-  -moz-border-radius: 20px;
-  -khtml-border-radius: 20px;
-  border-radius: 20px;
+  -moz-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
 }
  
 .noteclassic {
